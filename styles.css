@@ -11,6 +11,7 @@ a:link, a:visited {
     padding: 15px 25px;
     padding-left: 15px 5px;
     text-align: center;
+    text-decoration: none;
     display: inline-block;
 }
 a:hover, a:active {
