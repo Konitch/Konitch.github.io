@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Principal | HBD</title>
-    <link rel="stylesheet" href="css/main.css">
+    <title>Principal | Neudson Braga</title>
+    <link rel="stylesheet" href="CSS/main.css">
 </head>
 <body>
     <div>
         <div class="navbar">
             <div class="container">
-                <a class="logo" href="index.html">H<span>BD</span></a>
+                <a class="logo" href="index.html">N<span>Braga</span></a>
 
                 <img id="mobile-btn" class="mobile-menu" src="images/nav-icon.png" alt="Barra de Navegação" width="20" height="20">
 
@@ -18,74 +18,79 @@
                     <img id="mobile-exit" class="mobile-menu-exit" src="images/exit-icon.png" alt="Fechar Barra de Navegação" width="20" height="20">
 
                     <ul class="first-nav">
-                        <list><a href="feed.php">Mural</a></list>
-                        <list><a href="new.html">Postar</a></list>
-                        <list><a href="#">Sobre Nós</a></list>
+                        <list><a href="feed.php">Tributos</a></list>
+                        <list><a href="new.html">Escrever</a></list>
+                        <list><a href="#">Sobre Neudson</a></list>
                     </ul>
 
                     <ul class="second-nav">
-                        <list><a href="#">Contatos</a></list>
+                        <list><a href="#">Contato</a></list>
                     </ul>
                 </nav>
             </div>
         </div>
     </div>
 
-    <section class="first-block">
-        <div class="container">
-                <h2>Escreva uma nova mensagem:</h3><br>
-                
-                <form class="forms" action="post-form.php" autocomplete="off" method="POST">
-                    <label for="dest" class="subhead">PARA:</label>
+    <section class="first-block" style="position: relative;">
+        <div class="container" style="position: relative; z-index: 2;">
+            <h2>Escreva uma nova mensagem:</h2><br>
 
-                    <input class="destination" type="text" id="nome" name="name"><br>
+            <form class="forms" action="post-form.php" autocomplete="off" method="POST">
+                <label for="dest" class="subhead">SEU NOME:</label>
+                <input class="destination" type="text" id="nome" name="name"><br>
 
-                    <textarea class="body-message" id="mensagem" name="message" maxlength="300"></textarea>
+                <textarea class="body-message" id="mensagem" name="message" maxlength="300" placeholder="Escreva sua mensagem..."></textarea><br>
 
-                    <label> 
-                    <input type=radio id=image1 name="image" value="images/cake1.png" checked>
-                    <img src="images/cake1.png">
+                <div class="image-options">
+                    <label>
+                        <input type="radio" id="image1" name="image" value="images/cake1.png" checked>
+                        <img src="images/cake1.png" alt="Opção 1">
                     </label>
 
                     <label>
-                    <input type=radio id=image2 name="image" value="images/cake2.png">
-                    <img src="images/cake2.png">
+                        <input type="radio" id="image2" name="image" value="images/cake2.png">
+                        <img src="images/cake2.png" alt="Opção 2">
                     </label>
 
                     <label>
-                    <input type=radio id=image3 name="image" value="images/balloon1.png">
-                    <img src="images/balloon1.png">
+                        <input type="radio" id="image3" name="image" value="images/balloon1.png">
+                        <img src="images/balloon1.png" alt="Opção 3">
                     </label>
 
                     <label>
-                    <input type=radio id=image4 name="image" value="images/confetti1.png">
-                    <img src="images/confetti1.png">
+                        <input type="radio" id="image4" name="image" value="images/confetti1.png">
+                        <img src="images/confetti1.png" alt="Opção 4">
                     </label>
+                </div>
 
-                    <input type="submit" value="Postar">
-                </form>
-                
-
-            <img src="images/HBD.png" class="hbd-img" alt="Birthday Icon">
+                <input type="submit" value="Postar">
+            </form>
         </div>
+
+        <!-- Plano de fundo transparente com imagem -->
+        <img src="images/HBD.png" class="hbd-img" alt="Imagem de fundo Neudson Braga" style="
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+            opacity: 0.2;
+        ">
     </section>
 
     <script>
-
         const mobileBtn = document.getElementById("mobile-btn");
-            nav = document.querySelector('nav');
-            mobileBtnExit = document.getElementById('mobile-exit');
+        const nav = document.querySelector('nav');
+        const mobileBtnExit = document.getElementById('mobile-exit');
 
         mobileBtn.addEventListener('click', () => {
             nav.classList.add('menu-btn');
-        })
+        });
 
         mobileBtnExit.addEventListener('click', () => {
             nav.classList.remove('menu-btn');
-        })
-
-
+        });
     </script>
-
 </body>
 </html>
